@@ -1,0 +1,19 @@
+nav {
+  background-color: #1B1A17;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+nav .link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17 px;
+}
+nav .link:hover {
+  color: #E45826;
+  transform: scale(1.1);
+  transition: .3s;
+}
+

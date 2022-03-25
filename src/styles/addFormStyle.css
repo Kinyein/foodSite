@@ -1,0 +1,36 @@
+div.contentForm{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+form input{
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #E6D5B8;
+    padding: 0 5px;
+    font-size: 16px;
+}
+form input::placeholder{
+    color: #1B1A17;
+    font-size: 16px;
+}
+form button{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #E45826;
+}
+form button:focus{
+    background-color: #ca4e21;
+    transform: scale(.95);
+}
