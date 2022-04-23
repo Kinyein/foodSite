@@ -29,8 +29,9 @@ form button{
     color: #fff;
     cursor: pointer;
     background-color: #E45826;
+    transform: scale(.95);
 }
 form button:focus{
     background-color: #ca4e21;
-    transform: scale(.95);
+    
 }

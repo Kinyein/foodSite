@@ -6,14 +6,15 @@ nav {
   flex-wrap: wrap;
   width: 100%;
 }
+
 nav .link {
   color: #ffffff;
   text-decoration: none;
   font-size: 17 px;
-}
-nav .link:hover {
-  color: #E45826;
-  transform: scale(1.1);
   transition: .3s;
 }
 
+nav .link:hover {
+  color: #E45826;
+  transform: scale(1.1);
+}
