@@ -11,7 +11,5 @@ export const uploadImg = async (file)=>{
 
     const cloudResp = await resp.json()
 
-    console.log(cloudResp)
-
     return cloudResp.secure_url
 }

@@ -17,11 +17,11 @@ const FoodList = () => {
 
     useEffect(() => {
         getData()
-
     }, [])
 
 
     const getData = () => {
+        console.log('Obteniendo datos...')
         axios.get(url)
             .then(resp => {
                 console.log(resp.data)

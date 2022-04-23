@@ -37,7 +37,7 @@ const AddFoods = () => {
         let timerInterval
         Swal.fire({
           title: 'Guardando datos',
-          timer: 1500,
+          timer: 1000,
           timerProgressBar: true,
           didOpen: () => {
             Swal.showLoading()
@@ -52,7 +52,7 @@ const AddFoods = () => {
         }).then((result) => {
           /* Read more about handling dismissals below */
           if (result.dismiss === Swal.DismissReason.timer) {
-            console.log('I was closed by the timer')
+
           }
         })
       })
@@ -63,9 +63,30 @@ const AddFoods = () => {
 
   const handleImg = e => {
     const img = e.target.files[0]
+    let timerInterval
+    Swal.fire({
+      title: 'Subiendo...',
+      timer: 3000,
+      didOpen: () => {
+        Swal.showLoading()
+      },
+      willClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.timer) {
+      }
+    })
+
     uploadImg(img)
       .then(resp => {
         food.img = resp
+        Swal.fire({
+          icon: 'success',
+          title: 'Imagen subida',
+          showConfirmButton: false,
+          timer: 1500
+        })
       })
       .catch(error => {
         console.log(error);
